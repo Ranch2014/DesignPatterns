@@ -7,7 +7,7 @@ package factory.abstractFactory;
 public class JuniorTeamFactory implements TeamFactory {
 
     @Override
-    public Client creacteClient() {
+    public Client createClient() {
         return new JuniorClient();
     }
 
