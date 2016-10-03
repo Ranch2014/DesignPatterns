@@ -5,7 +5,9 @@ package factory.simple;
  * 工厂类
  */
 public class JobFactory {
-    public static final int PROGRAMMER = 1; /** 程序员常量 */
+    /** 定义常量 */
+    public static final int PROGRAMMER = 1;
+
     public static final int TEACHER = 2;
 
     public static Job createJob(int identity) {

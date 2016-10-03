@@ -9,10 +9,14 @@ public class SimpleFactory {
     public static void main(String[] args) {
         System.out.println("创建程序员:");
         Job job = JobFactory.createJob(JobFactory.PROGRAMMER);
-        job.work();
+        if (job != null) {
+            job.work();
+        }
 
         System.out.println("创建教师:");
         job = JobFactory.createJob(JobFactory.TEACHER);
-        job.work();
+        if (job != null) {
+            job.work();
+        }
     }
 }

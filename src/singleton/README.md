@@ -1,7 +1,7 @@
 #单例模式
 定义:  
 >The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it.  
-单例模式确保一个类只有一个实例，并提供一个全局访问点。
+>单例模式确保一个类只有一个实例，并提供一个全局访问点。
 
 为什么需要单例模式：  
 有些对象只需要一个，比如线程池、对话框、缓存、注册表、日志等。  
@@ -24,15 +24,12 @@
 
 ``` java
 public class Singleton {
-    private static Singleton uniqueInstance;
+  	//"饿汉式"实例化
+    private static Singleton uniqueInstance = new Singleton();
 
     private Singleton() {}
 
-    //加同步锁 (关键字 synchronized)
-    public static synchronized Singleton getInstance() {
-        if (uniqueInstance == null) {
-            uniqueInstance = new Singleton();
-        }
+    public static Singleton getInstance() {
         return uniqueInstance;
     }
 }
